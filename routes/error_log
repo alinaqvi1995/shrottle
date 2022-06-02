@@ -1,0 +1,16 @@
+[22-May-2022 12:03:46 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Route' not found in /home/shrottle/public_html/shrottle/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/shrottle/public_html/shrottle/routes/api.php on line 17
+[22-May-2022 12:03:55 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Broadcast' not found in /home/shrottle/public_html/shrottle/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/shrottle/public_html/shrottle/routes/channels.php on line 16
+[22-May-2022 12:04:08 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Artisan' not found in /home/shrottle/public_html/shrottle/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/shrottle/public_html/shrottle/routes/console.php on line 17
+[22-May-2022 17:00:17 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Route' not found in /home/shrottle/public_html/shrottle/routes/web.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/shrottle/public_html/shrottle/routes/web.php on line 20

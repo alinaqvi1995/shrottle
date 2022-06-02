@@ -1,0 +1,4 @@
+[22-May-2022 11:36:09 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Seeder' not found in /home/shrottle/public_html/shrottle/database/seeders/DatabaseSeeder.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/shrottle/public_html/shrottle/database/seeders/DatabaseSeeder.php on line 8
