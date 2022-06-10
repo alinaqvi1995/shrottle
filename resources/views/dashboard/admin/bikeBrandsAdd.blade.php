@@ -1,6 +1,6 @@
 @extends('dashboard.admin.layout.app')
 
-@section('page_title', 'Cobra Rider')
+@section('page_title', 'Shrottle - Rent A Bike')
 
 @section('head_style')
     <!-- Ionicons -->

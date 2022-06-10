@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobra Rider</title>
+    <title>Shrottle - Rent A Bike</title>
 </head>
 <style>
     <blade import|%20url(%26%2339%3Bhttps%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DMukta%3Awght%40200%3B300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap%26%2339%3B)%3B%0D>body {

@@ -6,6 +6,6 @@
         
     </ul>
     <span class="copyright ml-auto my-auto mr-2">Copyright © 2024
-        <a href="{{ url('/') }}" rel="nofollow">Cobra Rider</a>
+        <a href="{{ url('/') }}" rel="nofollow">Shrottle - Rent A Bike</a>
     </span>
 </footer>

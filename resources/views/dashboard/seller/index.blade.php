@@ -1,4 +1,4 @@
-@extends('dashboard.seller.layout.app') @section('page_title', 'Cobra Rider') @section('head_style')
+@extends('dashboard.seller.layout.app') @section('page_title', 'Shrottle - Rent A Bike') @section('head_style')
 <!-- Ionicons -->
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> @endsection @section('content')
 <style>
