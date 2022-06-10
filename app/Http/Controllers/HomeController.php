@@ -77,10 +77,18 @@ class HomeController extends Controller
         {
             // $bike = Bike::where('seller_id', auth()->user()->seller->id)->get();
             // $totalBikes = count($bike);
-            $leads = LeadsBike::where('status', '!=', 5)->with('user', 'bike')->whereHas('bike',function($query){
-            $query->where('seller_id', auth()->user()->seller->id);
-            })->latest('created_at')->get()->take(5);
-            return view('dashboard.seller.index', compact('leads'));
+            
+            if(auth()->user()->seller != null)
+            {
+                $leads = LeadsBike::where('status', '!=', 5)->with('user', 'bike')->whereHas('bike',function($query){
+                $query->where('seller_id', auth()->user()->seller->id);
+                })->latest('created_at')->get()->take(5);
+                return view('dashboard.seller.index', compact('leads'));
+            }
+            else{
+                $leads = "";
+                return view('dashboard.seller.index', compact('leads'));
+            }
         }
 
     }

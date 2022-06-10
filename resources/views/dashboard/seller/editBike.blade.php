@@ -87,6 +87,12 @@
                         required> 
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="rentPerDay" class="form-label fs-14 text-theme-primary fw-bold">Rent Per Day</label>
+                    <input type="number" class="form-control fs-14 input-dashboard" name="rentPerDay" value="{{ $bike->rentPerDay }}">
+                </div>
+            </div>
             {{-- <div class="col-md-6">
                 <div class="form-group">
                     <label for="weight" class="form-label fs-14 text-theme-primary fw-bold">Weight</label>

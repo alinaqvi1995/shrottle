@@ -15,52 +15,22 @@
 
     <div class="row">
         @foreach ($gallery as $pic)
-            
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" data-fancybox="gallery" >
-                    <img src="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="img-fluid img_galleyr">
-                </a>
+                <img src="{{ asset('storage/vendorGallery/images/' . $pic->image) }}"
+                    style="height: 250px; width: 300px;" class="img-fluid fit-none" alt="">
             </div>
         @endforeach
-       
-       @if(count($gallery)>0)
-        <div class="col-12 text-center">
-            <a href="" class="btn_dashboard py-3">
-                Load More
-            </a>
-        </div>
+        @if ($load_more == null)
+            @if (count($galleryAll) > 8)
+                <div class="col-12 text-center">
+                    <form action="{{ route('seller.gallery') }}" method="get">
+                        <input type="hidden" name="load_more" value="?">
+                        <button type="submit" class="btn_dashboard py-3">Load More</button>
+                    </form>
+                </div>
+            @endif
         @endif
-        
-
-        
-
-        
-
-
-
     </div>
-
-
-
-
 </div>
-
-
-<!--<script>-->
-<!--    $(document).ready(function() {-->
-<!--        $(".fancybox").fancybox({-->
-<!--            openEffect: "none",-->
-<!--            closeEffect: "none"-->
-<!--        });-->
-
-<!--        $(".zoom").hover(function() {-->
-
-<!--            $(this).addClass('transition');-->
-<!--        }, function() {-->
-
-<!--            $(this).removeClass('transition');-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->
 
 @endsection @section('bottom_script') @endsection

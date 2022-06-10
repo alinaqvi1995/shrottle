@@ -82,13 +82,13 @@
                     <input type="text" class="form-control fs-14 input-dashboard" name="reg_no">
                 </div>
             </div>
-            {{-- <div class="col-md-6">
+            <div class="col-md-6">
                 <div class="form-group">
-                    <label for="weight" class="form-label fs-14 text-theme-primary fw-bold">Weight</label>
-                    <input type="text" class="form-control fs-14 input-dashboard" name="weight">
+                    <label for="rentPerDay" class="form-label fs-14 text-theme-primary fw-bold">Rent Per Day</label>
+                    <input type="number" class="form-control fs-14 input-dashboard" name="rentPerDay">
                 </div>
             </div>
-            <div class="col-md-6">
+            {{-- <div class="col-md-6">
                 <div class="form-group">
                     <label for="seat_height" class="form-label fs-14 text-theme-primary fw-bold">Seat Height</label>
                     <input type="text" class="form-control fs-14 input-dashboard" name="seat_height">

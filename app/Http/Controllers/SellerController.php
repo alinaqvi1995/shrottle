@@ -235,6 +235,7 @@ class SellerController extends Controller
             $bike->mileage_bike     = $request->mileage_bike;
             $bike->pickup_loc       = $request->pickup_loc;
             $bike->slug             = $slug;
+            $bike->rentPerDay       = $rentPerDay;
             // if ($request->has('availablity')) 
             // {
             //     $bike->availablity = $request->availablity;
@@ -362,14 +363,6 @@ class SellerController extends Controller
         {
             $bike->pickup_loc = $request->pickup_loc;
         }
-        // if ($request->has('weight')) 
-        // {
-        //     $bike->weight = $request->weight;
-        // }
-        // if ($request->has('seat_height')) 
-        // {
-        //     $bike->seat_height = $request->seat_height;
-        // }
         if ($request->has('lugaggeR')) 
         {
             $bike->lugaggeR = $request->lugaggeR;
@@ -381,6 +374,10 @@ class SellerController extends Controller
         if ($request->has('lugaggeT')) 
         {
             $bike->lugaggeT = $request->lugaggeT;
+        }
+        if ($request->has('rentPerDay')) 
+        {
+            $bike->rentPerDay = $request->rentPerDay;
         }
         if ($request->has('hp')) 
         {
@@ -405,6 +402,7 @@ class SellerController extends Controller
         if ($request->has('title')) 
         {
             $bike->title = $request->title;
+            $bike->slug = Str::slug($request->title);
         }
         if ($request->has('mileage_bike')) 
         {
@@ -530,11 +528,21 @@ class SellerController extends Controller
         
         return back();
     }
-    public function myGallery()
+    public function myGallery(Request $request)
     {
-        $gallery = SellerGallery::where('seller_id', auth()->user()->seller->id)->take(8)->get();
-        // dd($gallery->toArray());
-        return view('dashboard.seller.gallery.index', compact('gallery'));
+        // dd($request->toArray());
+        $galleryAll = SellerGallery::where('seller_id', auth()->user()->seller->id)->get();
+        $gallery = SellerGallery::where('seller_id', auth()->user()->seller->id);
+        $load_more = "";
+        if($request->has('load_more'))
+        {
+            $load_more = $request->load_more;
+            $gallery = $gallery->get();
+        }
+        else{
+            $gallery = $gallery->take(8)->get();
+        }
+        return view('dashboard.seller.gallery.index', compact('gallery', 'galleryAll', 'load_more'));
     }
     public function myGalleryCreate()
     {
