@@ -210,12 +210,12 @@ class SellerController extends Controller
     }
     public function bikeStore(Request $request)
     {
+        dd($request->toArray());
         $valid = $this->validate($request, [
            'title' => 'required|string|unique:bike,title',
        ]);
 	   
 	   $slug     = Str::slug($request->title);
-        // dd($slug);
         try{
         DB::beginTransaction();
 

@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::get('/composercommand',function(){
+
+    shell_exec('composer update');
+});
+
 Route::get('/', [App\Http\Controllers\FrontendController::class, 'index'])->name('/');
 
 Auth::routes();

@@ -10,6 +10,14 @@
 
 @section('content')
     <style>
+        html * {
+            box-sizing: border-box;
+        }
+
+        p {
+            margin: 0;
+        }
+
         .upload {
             &__box {
                 padding: 40px;
@@ -86,9 +94,8 @@
             }
         }
 
-        .imgbox{
-        }
-        
+        .imgbox {}
+
         .img-bg {
             /* width: 100px; */
             /* height: 100px; */
@@ -258,13 +265,16 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="upload__box">
-                    <div class="upload__btn-box">
-                        <label class="upload__btn">
-                            <p>Upload images</p>
-                            <input name="gallery[]" type="file" multiple="" data-max_length="20" class="upload__inputfile">
-                        </label>
-                        <div class="upload__img-wrap"></div>
+                <div class="form-group">
+                    <div class="upload__box">
+                        <div class="upload__btn-box">
+                            <label class="upload__btn">
+                                <p>Upload images</p>
+                                <input name="gallery[]" type="file" multiple="" data-max_length="20"
+                                    class="upload__inputfile">
+                            </label>
+                            <div class="upload__img-wrap"></div>
+                        </div>
                     </div>
                 </div>
                 {{-- <div class="form-group">
@@ -368,6 +378,7 @@
                                 imgArray.push(f);
 
                                 var reader = new FileReader();
+                                console.log(reader);
                                 reader.onload = function(e) {
                                     var html =
                                         "<div class='upload__img-box'><div style='background-image: url(" +
